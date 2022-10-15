@@ -13,7 +13,7 @@ async function storeNumber(ACCOUNT, NUMBER) {
         const address = "0x3CCc71Dfd302768f4Bc18b09195fd337d6a11071"
         const storage = new ethers.Contract(address, abi, wallet)
         const txResponse = await storage.store(NUMBER);
-        const txReciept = await txResponse.wait(2);5
+        const txReciept = await txResponse.wait(1);
         return ({
             "Public Key": txResponse.from,
             "Contract Address": address,
